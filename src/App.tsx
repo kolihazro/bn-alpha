@@ -215,7 +215,7 @@ function App() {
             <Button
               type="primary"
               size="small"
-              onClick={() => window.open("https://x.com/0x_xiguajun", "_blank")}
+              onClick={() => window.open("https://t.me/winter_k", "_blank")}
               style={{
                 fontSize: "12px",
                 fontWeight: "500",
@@ -249,7 +249,7 @@ function App() {
                   filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))",
                 }}
               >
-                🐦
+                ✈️
               </span>
               <span
                 style={{
@@ -260,7 +260,7 @@ function App() {
                   fontWeight: "600",
                 }}
               >
-                关注推特
+                Telegram
               </span>
             </Button>
           </div>
@@ -318,14 +318,7 @@ function App() {
             <Paragraph
               style={{ fontSize: "14px", color: "#999", marginTop: "16px" }}
             >
-              数据源: Etherscan v2 API |{" "}
-              <a
-                href="https://github.com/Dylanma1994/bn-alpha"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                开源地址
-              </a>
+              永远记得汇丰银行的那句话,所有的出发都是为了更好的回来,希望你归来仍是少年!
             </Paragraph>
           </div>
 
