@@ -146,7 +146,7 @@ function App() {
               }}
             >
               <img
-                src="https://pbs.twimg.com/profile_images/1899804258758983680/4AkH3cnV_400x400.jpg"
+                src="https://youke1.picui.cn/s1/2025/07/20/687c685e130ed.jpg"
                 alt="Profile"
                 style={{
                   width: "20px",
@@ -164,12 +164,12 @@ function App() {
                   fontWeight: "600",
                 }}
               >
-                关注推特
+                联系Telegram
               </span>
               <span
                 style={{ fontSize: "11px", opacity: 0.8, color: "#ffffff" }}
               >
-                @0x_xiguajun
+                @winter_k
               </span>
             </Button>
           </div>
@@ -227,14 +227,7 @@ function App() {
             <Paragraph
               style={{ fontSize: "14px", color: "#999", marginTop: "16px" }}
             >
-              数据源: Etherscan v2 API |{" "}
-              <a
-                href="https://github.com/Dylanma1994/bn-alpha"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                开源地址
-              </a>
+              永远记得汇丰银行的那句话:所有的出发都是为了更好的回来,希望你归来仍是少年!
             </Paragraph>
           </div>
 
