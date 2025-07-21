@@ -97,11 +97,7 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({
         <Alert
           message={
             <span>
-              请在{" "}
-              <Link href="https://etherscan.io/apis" target="_blank">
-                etherscan.io/apis
-              </Link>{" "}
-              申请 API Key，免费限制 5qps/s
+              请向管理员获取api key
             </span>
           }
           type="info"
@@ -134,7 +130,7 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({
               },
             ]}
           >
-            <Input.Password placeholder="输入您的 Etherscan API Key（留空使用默认）" />
+            <Input.Password placeholder="输入您的  API Key（留空使用默认）" />
           </Form.Item>
         </Form>
 
