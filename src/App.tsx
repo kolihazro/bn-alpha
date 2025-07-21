@@ -116,7 +116,7 @@ function App() {
             <Button
               type="primary"
               size="small"
-              onClick={() => window.open("https://x.com/0x_xiguajun", "_blank")}
+              onClick={() => window.open("https://t.me/winter_k", "_blank")}
               style={{
                 fontSize: "12px",
                 fontWeight: "500",
