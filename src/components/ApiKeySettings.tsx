@@ -70,7 +70,7 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({
       title={
         <Space>
           <KeyOutlined />
-          Etherscan API Key 设置
+          API Key 设置
         </Space>
       }
       open={visible}
@@ -96,8 +96,12 @@ const ApiKeySettings: React.FC<ApiKeySettingsProps> = ({
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
         <Alert
           message={
-            <span>
-              请向管理员获取api key
+             <span>
+              请向{" "}
+              <Link href="https://t.me/winter_k" target="_blank">
+                管理员
+              </Link>{" "}
+              获取api key
             </span>
           }
           type="info"
