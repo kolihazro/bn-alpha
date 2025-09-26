@@ -6,6 +6,7 @@
 // 加使用说明
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Analytics } from '@vercel/analytics/vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import AlertComponent from './component/Item.vue'
 import { fetchData, getAlphaIds } from './service'
 import { tokenUrl } from './constants';
@@ -143,7 +144,8 @@ declare global {
 </script>
 
 <template>
-  <Analytics /> 
+  <Analytics />
+  <SpeedInsights />
   <h3 class="title">最近 10 秒波动告警</h3>
     <div id="errorDisplay" v-if="errorMessage" class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
