@@ -13,23 +13,30 @@
       <span class="fluctuation">万分之{{ fluctuation.toFixed(2) }}</span>
       <span class="amount">额{{ formatAmount(amount) }}</span>
     </div>
+    <div class="details">
+    <span class="fluctuation"> </span>
+      <span class="amount">价{{ formatPrice(price) }}</span>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { withDefaults, defineProps, computed } from 'vue';
+import { formatWithUnits } from '../utils';
 // 定义组件props类型
 interface Props {
   currencySymbol: string;
   fluctuation: number;
-  amount: number;
+  amount: string;
+  price: string;
 }
 
 // 定义props
 const props = withDefaults(defineProps<Props>(), {
   currencySymbol: '',
   fluctuation: 0,
-  amount: 0
+  amount: '0',
+  price: '0',
 });
 
 // 计算是否显示告警符号
@@ -45,14 +52,21 @@ const alertClass = computed(() => {
   return '';
 });
 
+const formatPrice = (price) => {
+    console.log(price);
+    return formatWithUnits(price)
+}
+
 // 格式化金额显示
-const formatAmount = (amount: number): string => {
-  if (amount >= 1000000) {
-    return `${(amount / 1000000).toFixed(1)}M`;
-  } else if (amount >= 1000) {
-    return `${(amount / 1000).toFixed(0)}k`;
-  }
-  return amount.toString();
+const formatAmount = (amount: string): string => {
+    // console.log(amount)
+    return amount;
+//   if (amount >= 1000000) {
+//     return `${(amount / 1000000).toFixed(1)}M`;
+//   } else if (amount >= 1000) {
+//     return `${(amount / 1000).toFixed(0)}k`;
+//   }
+//   return amount.toString();
 };
 
 // 计算提示文字
