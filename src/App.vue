@@ -1,7 +1,11 @@
 <script setup lang="ts">
 // TODO: api 报错时候提示停止使用
 // 定时停止刷新，防止api滥用
+// 收集使用者ip，统计pv
+// 放主人推广信息
+// 加使用说明
 import { ref, onMounted, onUnmounted } from 'vue'
+import { Analytics } from '@vercel/analytics/vue';
 import AlertComponent from './component/Item.vue'
 import { fetchData, getAlphaIds } from './service'
 import { tokenUrl } from './constants';
@@ -139,6 +143,7 @@ declare global {
 </script>
 
 <template>
+  <Analytics /> 
   <h3 class="title">最近 10 秒波动告警</h3>
     <div id="errorDisplay" v-if="errorMessage" class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
