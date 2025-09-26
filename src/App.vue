@@ -159,10 +159,10 @@ declare global {
   </div>
   <div class="button-container">
       <button v-if="isFetching" @click="handleStopClick" class="stop-btn base-btn">
-          停止轮询
+          停止自动刷新
       </button>
       <button v-else @click="startFetching" class="start-btn base-btn">
-          开始轮询
+          开始自动刷新
       </button>
   </div>
 </template>
