@@ -79,9 +79,20 @@ const formatAmount = (amount: string): string => {
 //   }
 //   return amount.toString();
 };
-
+function isNumericRegex(str) {
+    return /^[-+]?(\d+\.?\d*|\.\d+)([eE][-+]?\d+)?$/.test(str);
+}
+const judgeAmount = (amount) => {
+  return isNumericRegex(amount);
+}
 // 计算提示文字
 const hintText = computed(() => {
+  if (isNaN(props.fluctuation)) {
+    return '无数据';
+  }
+  if (judgeAmount(props.amount)) {
+    return '额太小'
+  }
   if (props.fluctuation >= 1) {
     return '卖出';
   }
@@ -90,6 +101,12 @@ const hintText = computed(() => {
 
 // 计算提示文字的样式类
 const hintClass = computed(() => {
+  if (isNaN(props.fluctuation)) {
+    return 'hint-high';
+  }
+  if (judgeAmount(props.amount)) {
+    return 'hint-high';
+  }
   if (props.fluctuation >= 5) {
     return 'hint-high';
   } else if (props.fluctuation >= 1) {
@@ -98,13 +115,6 @@ const hintClass = computed(() => {
   return 'hint-normal';
 });
 
-// 为告警符号添加tooltip
-const alertTooltip = computed(() => {
-  if (props.fluctuation >= 1) {
-    return '卖出';
-  }
-  return '';
-});
 </script>
 
 <style scoped>
