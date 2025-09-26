@@ -42,11 +42,16 @@ function getSymbolsFromQuery(): string[] {
 const errorMessage = ref('')
 function checkDataAbnormalities(results: any[]) {
   for (const result of results) {
-    const fluctuation = parseFloat(result.fluctuation)
-    
-    if (isNaN(fluctuation) || fluctuation > 1000) {
-      errorMessage.value = '数据可能出错了，请立即卖出'
-      break
+    const coin = result?.currencySymbol || '';
+    try {
+      const fluctuation = parseFloat(result.fluctuation)
+      if (isNaN(fluctuation)) {
+        errorMessage.value = coin + '没人要了，请卖出并移除' + coin;
+      } else if (fluctuation > 1000) {
+        errorMessage.value = coin + '波动巨大，请卖出并移除' + coin;
+      }
+    } catch {
+      errorMessage.value = coin + '出错，请移除' + coin;
     }
   }
 }

@@ -1,7 +1,17 @@
 # alpha-bn-trade
 
-This template should help get you started developing with Vue 3 in Vite.
+http://localhost:5173/?symbols=ALEO,ZEUS,WOD
+https://bn-alpha-two.vercel.app/?symbols=ALEO,ZEUS,WOD
 
+const symbols = [
+    'WOD',
+    // 'PTB',
+    // 'TRADOOR',
+    'ALEO',
+    'MCH',
+    'ZEUS',
+    // 'MTP'
+];
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).

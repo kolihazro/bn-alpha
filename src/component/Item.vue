@@ -10,7 +10,7 @@
     <div class="hint" :class="hintClass">{{ hintText }}</div>
     </div>
     <div class="details">
-      <span class="fluctuation">万分之{{ fluctuation.toFixed(2) }}</span>
+      <span class="fluctuation">万分之{{ formatFluctuation(fluctuation) }}</span>
       <span class="amount">额{{ formatAmount(amount) }}</span>
     </div>
     <div class="details">
@@ -28,7 +28,7 @@ interface Props {
   currencySymbol: string;
   fluctuation: number;
   amount: string;
-  price: string;
+  price: number | string;
 }
 
 // 定义props
@@ -51,10 +51,21 @@ const alertClass = computed(() => {
   }
   return '';
 });
-
+const formatFluctuation = (fluctuation) => {
+    try {
+      return fluctuation.toFixed(2)
+    } catch(e) {
+      console.log(props.currencySymbol, e)
+      return '';
+    }
+}
 const formatPrice = (price) => {
-    console.log(price);
-    return formatWithUnits(price)
+    try {
+      return formatWithUnits(price)
+    } catch(e) {
+      console.log(props.currencySymbol, e)
+      return '';
+    }
 }
 
 // 格式化金额显示

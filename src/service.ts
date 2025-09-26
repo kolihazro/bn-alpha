@@ -78,7 +78,7 @@ export async function getAlphaIds(symbols, url) {
 export async function fetchData(currency) {
       try {
           const currentTime = Date.now();
-          const tenSecondsAgo = currentTime - 9000; // 9秒前的时间戳
+          const tenSecondsAgo = currentTime - 10 * 1000; // 9秒前的时间戳
           const id = currency.id;
           const params = {
               symbol: `${id}USDT`, // 根据实际情况修改
@@ -147,9 +147,17 @@ export async function fetchData(currency) {
               // myPrint(`总成交额度: ${totalAmount}`);
               // console.log('--------------------------------------');
           } else {
-              console.log('未获取到交易数据');
+              console.log('未获取到交易数据', currency.symbol);
+              return {
+                id,
+                currencySymbol: currency.symbol,
+              }
           }
       } catch (error) {
           console.error('请求API时出错:', error.message, error.code, JSON.stringify(error));
+          return {
+            id: currency.id,
+            currencySymbol: currency.symbol,
+          }
       }
   }
