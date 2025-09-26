@@ -8,6 +8,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { Analytics } from '@vercel/analytics/vue';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
 import AlertComponent from './component/Item.vue'
+import FooterInfo from './component/Footer.vue';
 import { fetchData, getAlphaIds } from './service'
 import { tokenUrl } from './constants';
 // 类型定义
@@ -172,6 +173,7 @@ declare global {
           开始自动刷新
       </button>
   </div>
+  <FooterInfo />
 </template>
 
 <style scoped>
