@@ -23,7 +23,7 @@ interface CurrencyData {
 
 // 响应式数据
 const alertDataList = ref<CurrencyData[]>([])
-const timer = ref<NodeJS.Timeout | null>(null)
+const timer = ref<number | null>(null)
 const startTime = ref<number>(0)
 const MAX_DURATION = 5 * 60 * 1000 // 5分钟
 
