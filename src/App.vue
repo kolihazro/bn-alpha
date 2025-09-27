@@ -46,12 +46,12 @@ function checkDataAbnormalities(results: any[]) {
     try {
       const fluctuation = parseFloat(result.fluctuation)
       if (isNaN(fluctuation)) {
-        errorMessage.value = coin + '没人要了，请卖出并移除' + coin;
+        errorMessage.value = coin + '无数据，卖出' + coin;
       } else if (fluctuation > 1000) {
-        errorMessage.value = coin + '波动巨大，请卖出并移除' + coin;
+        errorMessage.value = coin + '波动巨大，卖出' + coin;
       }
     } catch {
-      errorMessage.value = coin + '出错，请移除' + coin;
+      errorMessage.value = coin + '出错，卖出' + coin;
     }
   }
 }
