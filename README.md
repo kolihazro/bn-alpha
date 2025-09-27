@@ -2,6 +2,7 @@
 
 http://localhost:5173/?symbols=ALEO,ZEUS,WOD
 https://bn-alpha-two.vercel.app/?symbols=ALEO,ZEUS,WOD
+https://bn-alpha-two.vercel.app/?symbols=ALEO,ZEUS,WOD,MCH,ZEUS,WOD,MCH,HANA,SQD,KOGE,AOP,NUMI,STBL,ASTER,K,BLESS,Q,AIA
 
 const symbols = [
     'WOD',
