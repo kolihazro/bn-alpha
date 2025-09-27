@@ -109,7 +109,7 @@ function startFetching() {
 
 // 修改超时提示函数
 function showTimeoutAlert() {
-  if (confirm('为避免API滥用，数据获取已自动停止。是否继续轮询？')) {
+  if (confirm('自动刷新已暂停，点击继续自动刷新')) {
     startTime.value = Date.now() // 重置计时
     startFetching()
   } else {
