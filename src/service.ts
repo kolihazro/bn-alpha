@@ -62,6 +62,9 @@ export async function getAlphaIds(symbols, url) {
         const symbolSet = new Set(symbols.map(s => s.toUpperCase()));
         for (const token of response.data) {
           if (symbolSet.has(token.symbol.toUpperCase())) {
+            if (token.offline) {
+              continue;
+            }
             result.push({
               id: token.alphaId,
               symbol: token.symbol
