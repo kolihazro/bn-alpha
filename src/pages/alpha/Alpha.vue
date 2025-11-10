@@ -192,7 +192,7 @@ h3 {
 .sub-title {
   text-align: center;
   font-size: 16px;
-  color: lightblue;
+  color: cornflowerblue;
 }
 .container {
   display: flex;
