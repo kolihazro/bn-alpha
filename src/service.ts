@@ -67,7 +67,8 @@ export async function getAlphaIds(symbols, url) {
             }
             result.push({
               id: token.alphaId,
-              symbol: token.symbol
+              symbol: token.symbol,
+              mulPoint: token.mulPoint
             });
           }
         }
@@ -136,6 +137,7 @@ export async function fetchData(currency) {
               return {
                 id,
                 currencySymbol: currency.symbol,
+                mulPoint: currency.mulPoint,
                 prefix,
                 fluctuation: priceDiffPerTenThousand.toFixed(4),
                 amount: formattedTotalAmount,

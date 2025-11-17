@@ -167,6 +167,7 @@ declare global {
       :fluctuation="parseFloat(alertData.fluctuation)"
       :amount="alertData.amount"
       :price="alertData.lastPrice"
+      :mulPoint="alertData.mulPoint"
       class="item"
     />
 
