@@ -16,4 +16,4 @@ export const bestPriceUrl = prefix + '/fapi/v1/ticker/bookTicker';
 //     "askQty": "9.00000000", //挂单量
 //     "time": 1589437530011   // 撮合引擎时间
 //   }
-export const defaultCoins = ['AIO','BEAT','MERL','ANOME'];
+export const defaultCoins = ['AIO','AT','BOS','BAY'];
