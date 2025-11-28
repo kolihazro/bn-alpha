@@ -15,7 +15,7 @@
     </div>
     <div class="details">
     <span class="fluctuation strong-tip">
-      <span v-if="!isFourMulPoint">非四倍</span>
+      <span v-if="notFourMulPoint">非四倍</span>
     </span>
       <span class="amount">价{{ formatPrice(price) }}</span>
     </div>
@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 // 计算是否显示告警符号
 const showAlert = computed(() => props.fluctuation >= 1);
-const isFourMulPoint = computed(() => Number(props.mulPoint) === 4);
+const notFourMulPoint = computed(() => props.mulPoint && Number(props.mulPoint) !== 4);
 
 // 计算告警符号的样式类
 const alertClass = computed(() => {
