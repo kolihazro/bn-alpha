@@ -126,9 +126,9 @@ function handleStopClick() {
 
 const toggleStop = () => {
   if (isFetching.value === true) {
-    startFetching();
-  } else {
     handleStopClick();
+  } else {
+    startFetching();
   }
 }
 
