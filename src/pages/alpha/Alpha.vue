@@ -124,16 +124,32 @@ function handleStopClick() {
   errorMessage.value = '已停止，数据不可参考'
 }
 
+const toggleStop = () => {
+  if (isFetching.value === true) {
+    startFetching();
+  } else {
+    handleStopClick();
+  }
+}
+
+const handleKeyPress = (event) => {
+  if (event.code === 'Space') {
+    toggleStop();
+  }
+}
+
 // 修改onMounted中的调用
 onMounted(() => {
   startTime.value = Date.now()
   fetchDataForSymbols()
   timer.value = setInterval(fetchDataForSymbols, 1000)
+  window.addEventListener('keydown', handleKeyPress)
 })
 
 // 组件卸载时清理定时器
 onUnmounted(() => {
-  stopFetching()
+  stopFetching();
+  window.removeEventListener('keydown', handleKeyPress)
 })
 
 // 声明全局缓存变量
