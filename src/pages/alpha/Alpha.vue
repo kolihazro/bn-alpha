@@ -170,7 +170,10 @@ declare global {
   <SpeedInsights />
   <h3 class="title">Winter 1秒波动</h3>
   <h2 class="sub-title">所有的出发都是为了更好的回来</h2></br>
-  <div style="cursor:pointer; text-align:center;" onclick="window.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhofrU4HilfXjeER6bgve2jB9KZOoe0Vqd8Q&s', '_blank', 'width=600,height=400');">加入群聊</div>
+  <button onclick="document.getElementById('modal').showModal();">加入群聊</button><dialog id="modal" style="position:relative;">
+    <span onclick="this.parentElement.close();" style="position:absolute;top:0;right:0;cursor:pointer;">&times;</span>
+    <img src="https://youke.xn--y7xa690gmna.cn/s1/2026/01/26/69776f771a8a5.webp" alt="图片" style="width:100%;height:auto;">
+</dialog>
     <div id="errorDisplay" v-if="errorMessage " class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
       <div>{{ errorMessage }}</div>
