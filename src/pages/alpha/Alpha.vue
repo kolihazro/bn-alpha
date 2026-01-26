@@ -170,7 +170,7 @@ declare global {
   <SpeedInsights />
   <h3 class="title">Winter 1秒波动</h3>
   <h2 class="sub-title">所有的出发都是为了更好的回来</h2></br>
-  <a href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,puI3x1CQbK/a7H9ivdFHN8xjbDqT2TSQT05CIYN7BMmdR7ksupjDEA==&_dt_no_comment=1&origin=11?">加入群聊</a>
+  <div style="cursor:pointer; text-align:center;" onclick="window.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhofrU4HilfXjeER6bgve2jB9KZOoe0Vqd8Q&s', '_blank', 'width=600,height=400');">加入群聊</div>
     <div id="errorDisplay" v-if="errorMessage " class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
       <div>{{ errorMessage }}</div>
