@@ -168,8 +168,8 @@ declare global {
 <template>
   <Analytics />
   <SpeedInsights />
-  <h3 class="title">最近 10 秒波动告警</h3>
-  <h2 class="sub-title">扶光学院专属 禁止外传</h2>
+  <h3 class="title">Winter 1秒波动</h3>
+  <h2 class="sub-title">所有的出发都是为了更好的回来</h2>
     <div id="errorDisplay" v-if="errorMessage " class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
       <div>{{ errorMessage }}</div>
@@ -190,10 +190,10 @@ declare global {
   </div>
   <div class="button-container">
       <button v-if="isFetching" @click="handleStopClick" class="stop-btn base-btn">
-          点击停止自动刷新
+          停止自动刷新
       </button>
       <button v-else @click="startFetching" class="start-btn base-btn">
-          点击开始自动刷新
+          开始自动刷新
       </button>
   </div>
   <FooterInfo />
