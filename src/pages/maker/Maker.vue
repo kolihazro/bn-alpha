@@ -11,7 +11,7 @@ import { tokenUrl } from '../../constants';
 <template>
   <Analytics />
   <SpeedInsights />
-  <h3 class="title">最近 10 秒波动告警</h3>
+  <h3 class="title">Winter 1秒波动</h3>
     <div id="errorDisplay" v-if="errorMessage " class="error-message error-style-1 fade-in">
       <div class="error-icon">⚠️</div>
       <div>{{ errorMessage }}</div>
@@ -31,10 +31,10 @@ import { tokenUrl } from '../../constants';
   </div>
   <div class="button-container">
       <button v-if="isFetching" @click="handleStopClick" class="stop-btn base-btn">
-          点击停止自动刷新
+          停止自动刷新
       </button>
       <button v-else @click="startFetching" class="start-btn base-btn">
-          点击开始自动刷新
+          开始自动刷新
       </button>
   </div>
   <FooterInfo />
