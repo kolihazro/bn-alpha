@@ -8,8 +8,6 @@
       {{ isCollapsed ? '↑' : '↓' }}
     </button>
     <div class="footer-info__content">
-      <span class="footer-info__item">微信：long84621</span>
-      <span class="footer-info__item">✉️：hulong409@gmail.com</span>
       <!-- <span class="footer-info__item">© 2023 版权所有</span> -->
     </div>
   </div>
