@@ -11,13 +11,13 @@
     </div>
     <div class="details">
       <span class="fluctuation">万分之{{ formatFluctuation(fluctuation) }}</span>
-      <span class="amount">额{{ formatAmount(amount) }}</span>
+      <span class="amount">{{ formatAmount(amount) }}</span>
     </div>
     <div class="details">
     <span class="fluctuation strong-tip">
       <span v-if="notFourMulPoint">非四倍</span>
     </span>
-      <span class="amount">价{{ formatPrice(price) }}</span>
+      <span class="amount">价格{{ formatPrice(price) }}</span>
     </div>
   </div>
 </template>
@@ -98,9 +98,9 @@ const hintText = computed(() => {
     return '额太小'
   }
   if (props.fluctuation >= 1) {
-    return '卖出';
+    return '不刷';
   }
-  return '刷分';
+  return '开刷';
 });
 
 // 计算提示文字的样式类
