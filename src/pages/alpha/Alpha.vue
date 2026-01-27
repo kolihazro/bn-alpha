@@ -81,7 +81,7 @@ async function fetchDataForSymbols() {
       return
     }
   } catch (error) {
-    errorMessage.value = '数据可能出错了，请立即卖出';
+    errorMessage.value = '请科学上网后访问~🪜';
     console.error('获取币种数据失败:', error)
   }
 }
